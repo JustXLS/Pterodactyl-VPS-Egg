@@ -406,7 +406,7 @@ done < "$ROOTFS_DIR/vps.config"
 
 # This command starts PRoot and binds several important directories
 # from the host file system to our special root file system.
-"$ROOTFS_DIR/usr/sbin/chroot" \
+"/usr/sbin/chroot" \
 --rootfs="${ROOTFS_DIR}" \
 -0 -w "/root" -b /dev -b /sys -b /proc -b /etc/resolv.conf $port_args --kill-on-exit \
 /bin/sh "$ROOTFS_DIR/run.sh"
