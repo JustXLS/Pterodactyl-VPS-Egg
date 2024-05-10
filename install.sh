@@ -372,13 +372,13 @@ curl -Ls "https://raw.githubusercontent.com/ysdragon/Pterodactyl-VPS-Egg/main/ru
 chmod +x "$ROOTFS_DIR/home/container/run.sh"
 
 # Download static proot.
-if [ ! -e "$ROOTFS_DIR/.installed" ]; then
-    # Download the packages from their sources
-    mkdir -p "$ROOTFS_DIR/usr/local/bin"
-    curl -Ls "https://github.com/proot-me/proot/releases/download/v${PROOT_VERSION}/proot-v${PROOT_VERSION}-${ARCH}-static" -o "$ROOTFS_DIR/usr/local/bin/proot"
-    # Make PRoot executable.
-    chmod 755 "$ROOTFS_DIR/usr/local/bin/proot"
-fi
+#if [ ! -e "$ROOTFS_DIR/.installed" ]; then
+#    # Download the packages from their sources
+#    mkdir -p "$ROOTFS_DIR/usr/local/bin"
+#    curl -Ls "https://github.com/proot-me/proot/releases/download/v${PROOT_VERSION}/proot-v${PROOT_VERSION}-${ARCH}-static" -o "$ROOTFS_DIR/usr/local/bin/proot"
+#    # Make PRoot executable.
+#    chmod 755 "$ROOTFS_DIR/usr/local/bin/proot"
+#fi
 
 # Clean-up after installation complete & finish up.
 if [ ! -e "$ROOTFS_DIR/.installed" ]; then
